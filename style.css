@@ -1,0 +1,58 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background: url("5-dots.png");
+}
+
+.container{
+    margin-top: 20px;
+
+}
+.jumbotron{
+    background-color: white;
+}
+
+.display-4{
+    text-align: left;
+    font-size: 40px;
+}
+
+#output{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    border: dashed lightgray;
+    font-size: 80px;
+    
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 30px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 40px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 40px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 40px;
+  }
+
+  .btn-lg{
+      margin: 20px;
+      padding-right:70px;
+      padding-left:70px;
+  }
+
+  .left{
+      background-color:red;
+      border: red;
+  }
+  .right{
+      background-color: gray;
+      border: gray;
+  }
+
+  .navbar{
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+  }
