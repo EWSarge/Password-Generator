@@ -2,7 +2,7 @@
 <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    
     <title>Random Password Generator</title>
 
 </head>
@@ -14,7 +14,7 @@
         <div class="jumbotron">
                 <h3 class="display-4">Generate a Password</h3>
                 <hr>
-                <center><div id="output"></div></center><br><hr>
+                <center><div id="output" placeholder="Your Password Here"></div></center><br><hr>
                 
                 Length:<input type="number" name="quantity" min="8" max="128" id="length">
                 <div>Select Character Type:</div><br>
@@ -39,8 +39,8 @@
                           
         </div>
                   <center>
-                <a class="btn btn-primary btn-lg left generate" href="#" role="button">Generate Password</a>
-                <a class="btn btn-primary btn-lg right clipboard'" href="#" role="button">Copy to Clipboard</a>
+                <a class="btn btn-primary btn-lg left" href="#" role="button" id="generate">Generate Password</a>
+                <a class="btn btn-primary btn-lg right clipboard'" href="#" role="button" id="clip">Copy to Clipboard</a>
               </div>
             </center>   
               
@@ -48,6 +48,7 @@
 
             </div>
 </body>
+<script src="script.js"></script>
 
 
 

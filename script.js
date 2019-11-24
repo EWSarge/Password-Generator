@@ -24,10 +24,18 @@ function generate( length = (12) ){
     
 }
 
+document.getElementById("generate").addEventListener("click", text);
 
-
-document.getElementById("left").addEventListener("click", pass());
-
-function pass() {
-  document.getElementById("output").innerHTML = generate();
+function text() {
+    document.getElementById("output").innerHTML = generate();
 }
+
+
+
+function copy() {
+    var copyText = generate();
+    document.execCommand("copy");
+    alert("Copies the text: " + copyText);
+  }
+
+  document.getElementById("clip").addEventListener("click", copy);
