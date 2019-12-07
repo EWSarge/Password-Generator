@@ -8,19 +8,87 @@ var symbolsEl = document.querySelector("#symbols");
 var generateEl = document.querySelector("#generate");
 var clipboard = document.querySelector("#clipboard");
 
-function generate( length = (12) ){
+
+
+
+// function checkSymbols() {
+   
+//     if(document.getElementById("symbols").checked == true){
+//         console.log("is working")
+//     }
+    
+// };
+
+function checkSymbols () {
+    //var checkbox = document.getElementById("symbols");
+    if(document.getElementById("symbols").checked){
+        return true
+    }
+}
+function checkNumbers(){
+    if(document.getElementById("numbers").checked){
+        return true
+    }   
+     
+};
+function checkLowercase(){
+    if(document.getElementById("lowercase").checked){
+        return true
+    }   
+};
+function checkUppercase(){
+    if(document.getElementById("uppercase").checked){
+        return true
+    }   
+}
+
+
+
+
+
+
+function generate(){
+    var length = lengthEl.value
+   
     var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var lowercase = 'abcdefghijklmnopqrstuvwxyz';
     var numbers = '0123456789';
     var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
-    var all = uppercase + lowercase + numbers + symbols;
-    var password = '';
-    for (var index = 0; index < length; index++) {
-        var character = Math.floor(Math.random() * all.length);
-        password += all.substring(character, character + 1);
-        
+    var itemsToLoop = ""
+     //var all = uppercase + lowercase + numbers + symbols;
+
+    if(checkSymbols()){
+        itemsToLoop += symbols
     }
+
+    if(checkNumbers()){
+        itemsToLoop += numbers
+    }
+
+    if(checkLowercase()){
+        itemsToLoop += lowercase
+    }
+   
+    if(checkUppercase()){
+        itemsToLoop += uppercase
+    }
+   
+   
+
+
+
+
+    var password = '';
+
+    for (var index = 0; index < length; index++) {
+        var character = Math.floor(Math.random() * itemsToLoop.length);
+        password += itemsToLoop.substring(character, character + 1);
+    }
+
     return password;
+
+    
+
     
 }
 
@@ -33,9 +101,9 @@ function text() {
 
 
 function copy() {
-    var copyText = generate();
+    
     document.execCommand("copy");
-    alert("Copies the text: " + copyText);
+    alert("Copies the text: " + resultEl);
   }
 
   document.getElementById("clip").addEventListener("click", copy);
