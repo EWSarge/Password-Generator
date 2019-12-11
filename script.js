@@ -99,11 +99,15 @@ function text() {
 }
 
 
-
 function copy() {
-    
+    var copyText = document.getElementById("#output");
+    copyText.select();
     document.execCommand("copy");
-    alert("Copies the text: " + resultEl);
+    alert("Copied Text " + resultEl)
   }
 
-  document.getElementById("clip").addEventListener("click", copy);
+  document.querySelector("#clip").addEventListener("click", copy);
+
+  
+
+  
